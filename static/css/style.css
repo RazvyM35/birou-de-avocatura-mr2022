@@ -1,3 +1,13 @@
 .imgfull {
     width: 100%;
 }
+
+.titlu {
+    font-size:2vw;
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    --bs-body-bg: rgb(248, 249, 250);
+}
