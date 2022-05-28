@@ -1,0 +1,18 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+  <p>
+    {{descriere}}
+  </p>
+  {% if avocati %}
+  Avocatii care practica <b>{{numespec}}</b>:
+  <ul>
+    {% for avocat in avocati %}
+    <li><a href="/avocat/{{avocat.id}}">{{avocat.nume}} {{avocat.prenume}}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div><p class="text-danger">Nu exista avocati!</p></div>
+  {% endif %}
+
+
+{% endblock content %}

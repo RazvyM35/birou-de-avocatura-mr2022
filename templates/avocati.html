@@ -1,0 +1,37 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if search %}
+  Rezultatele cautarii dupa <i>'{{search}}'</i>:
+  {% else %}
+    Lista avocatilor:
+  {% endif %}
+  <br><br>
+  {% if avocati %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nume</th>
+          <th scope="col">Specialitati</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for avocat in avocati %}
+      <tr>
+        <td><a href="/avocat/{{avocat.id}}">{{avocat.nume}} {{avocat.prenume}}</a></td>
+        <td><a href="/specialitate/{{avocat.idspec}}">{{avocat.numespec}}</a></td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div class="warning">Nu exista rezultate!</div>
+  {% endif %}
+  <br/>
+  <form action="/cauta/" method="post">
+    <input type="text" name="cauta" placeholder="cauta avocat" value="{{cauta}}">
+    <input type="submit" value="Cauta">
+  </form>
+
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if avocat %}
+    Date avocat:
+    <dl class="row">
+      <dt class="col-sm-3">Nume</dt>
+      <dd class="col-sm-9">{{avocat.nume}}</dd>
+      <dt class="col-sm-3">Prenume</dt>
+      <dd class="col-sm-9">{{avocat.prenume}}</dd>
+      <dt class="col-sm-3">Specialitate</dt>
+      <dd class="col-sm-9"><a href="/specialitate/{{avocat.idspec}}">{{avocat.numespec}}</a></dd>
+      <dt class="col-sm-3">Poza</dt>
+      <dd class="col-sm-9"><img src="/static/images/avocat_{{avocat.id}}.jpg" class="img-thumbnail" alt="{{avocat.nume}} {{avocat.prenume}}"></dd>
+    </dl>
+  {% else %}
+    <div><p class="text-danger">Avocat inexistent</p></div>
+  {% endif %}
+
+{% endblock content %}

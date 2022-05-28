@@ -1,0 +1,43 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if specialitati %}
+<!--    <table class="table">-->
+<!--       <thead>-->
+<!--       <tr>-->
+<!--         <th scope="col">Nume</th>-->
+
+<!--       </tr>-->
+<!--       </thead>-->
+<!--      <tbody>-->
+<!--      {% for specialitate in specialitati %}-->
+<!--      <tr>-->
+<!--        <td><a href="/specialitate/{{specialitate.idspec}}">{{specialitate.numespec}}</a></td>-->
+<!--      </tr>-->
+<!--      {% endfor %}-->
+<!--      </tbody>-->
+<!--    </table>-->
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for specialitate in specialitati %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href="/specialitate/{{specialitate.idspec}}">
+              <img src="/static/images/spec_{{specialitate.idspec}}.jpg" class="imgfull rounded img-fluid" alt="{{specialitate.numespec}}">
+            </a>
+            <div class="card-body">
+              <p class="card-text">{{specialitate.numespec}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+    <div><p class="text-danger">Nu exista rezultate!</p></div>
+  {% endif %}
+
+{% endblock content %}

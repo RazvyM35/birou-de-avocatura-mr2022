@@ -1,0 +1,23 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+<form name="contactform">
+  <div class="mb-3">
+    <label for="nume" class="form-label">Nume</label>
+    <input class="form-control" type="text" id="nume" placeholder="Nume" aria-label="default input">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Adresa e-mail</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Nu vom împărtăși niciodată e-mailul dvs. cu nimeni altcineva.</div>
+  </div>
+  <div class="mb-3">
+    <label for="mesaj" class="form-label">Mesaj</label>
+    <textarea class="form-control" id="mesaj" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="adresa" class="form-label">Adresa biroului</label>
+    <input class="form-control" type="text" value="Str. Florea, nr. 15, Sector 5, Bucuresti" id="adresa" aria-label="Disabled input example" disabled readonly>
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="validate()">Trimite</button>
+</form>
+{% endblock content %}
