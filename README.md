@@ -1,6 +1,6 @@
 # birou-de-avocatura
 
-Militon Razvan
+MILITON RĂZVAN
 
 Proiectul este pentru cursul Python full-stack si reprezinta site-ul unui birou de avocatura.
 
