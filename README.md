@@ -1,7 +1,9 @@
 # birou-de-avocatura
 
-MILITON RĂZVAN
+Titlul proiectului: birou-de-avocatura
 
-Proiectul este pentru cursul Python full-stack si reprezinta site-ul unui birou de avocatura.
+Descrierea proiectului/aplicatiei: Proiectul este pentru cursul Python full-stack si reprezinta site-ul unui birou de avocatura.
 
-Tehnologiile utilizate sunt: Python/Flask, HTML, JavaScript, CSS/Bootstrap.
+Tehnologii utilizate: Python/Flask, HTML, CSS/Bootstrap, Jinja.
+
+Nume/Prenume: MILITON RĂZVAN
